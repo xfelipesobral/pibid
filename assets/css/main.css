@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    outline: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+#cabecalho {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+#cabecalho h1 {
+    color: #fff;
+    font-size: 5rem;
+    
+}
+
+#cabecalho img {
+    width: 250px;
+}
+
+#cabecalho a:hover {
+    filter: invert(5%);
+    -webkit-filter: invert(5%);
+}
+
+#apresentacao {
+    text-align: center;
+    font-weight: 300;
+}
+
+#apresentacao h1 {
+    color: #222222;
+}
+
+#apresentacao #sobremim {
+    margin-bottom: 15px;
+}
+
+#apresentacao #sobremim p {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+}
+
+#apresentacao #sobremim h3 {
+    font-weight: 100;
+}
+
+#apresentacao #interesses p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#apresentacao #interesses a {
+    color: #222222;
+}
+
+#social {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+}
+
+#social .container {
+    padding: 10%;
+}
+
+#social ul {
+    margin: 25px 0;
+}
+
+#social ul li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 1%;
+}
+
+#social ul li img {
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+#social ul li img:hover {
+    transition: all 0.2s;
+    filter: invert(80%);
+    -webkit-filter: invert(80%);
+    transform: translateY(-5px);
+}
+
+#social .link {
+    color: #fff;
+}
+
+#social .link:hover {
+    transition: all 0.2s;
+    color: #e0e0e0;
+}
+
+#galeria {
+    text-align: center;
+}
+
+#galeria img {
+    width: 100%;
+    max-width: 1080px;
+}
+
+#galeria .container {
+    background: #fff;
+    margin: 5%;
+    padding: 1%;
+}
+
+#projetos {
+    text-align: center;
+}
+
+#projetos ul li {
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+}
+
+#rodape {
+    background: #0f0f0f;
+    text-align: center;
+    color: #fff;
+}
+
+#rodape p {
+    padding-bottom: 5px;
+    color: #ebebeb;
+}
+
+#rodape img {
+    margin: 15px 0;
+}
+
+#rodape .container {
+    margin: 0;
+}
+
+#rodape img {
+    width: 75px;
+    height: 75px;
+}
+
+#rodape a {
+    color: #fff
+}
+
+.link {
+    text-decoration: none;
+    color: #1B3440;
+}
+
+.link:hover {
+    transition: all 0.2s;
+    color: #13688f;
+}
+
+.container {
+    margin: 5% 5%;
+    padding: 5%;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.17);
+    box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.17);
+}
+
+.botao {
+    background-color: #0f0f0f;
+    border: 0.1rem solid #0f0f0f;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: auto;
+    letter-spacing: .1rem;
+    line-height: 2rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.botao:hover {
+    transition: all 0.2s;
+    background-color: #424242;
+}
+
+.subir {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.subir img {
+    width: 50px;
+    height: 50px;
+}
+
+.subir:hover{
+    transition: all 0.2s;
+    filter: invert(30%);
+    -webkit-filter: invert(30%);
+    transform: translateY(-5px);
+}
+
+.item {
+    width: 47%;
+    height: auto;
+    background: #fff;
+    border: 1px #e6e6e6 solid;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item .descricao {
+    text-align: left;
+    padding: 15px;
+}
+
+.item .descricao p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+@media (max-width: 600px) { 
+    #projetos ul li {
+        margin: 5% 0;
+    }
+
+    .item {
+        width: 100%;
+    }
+}
