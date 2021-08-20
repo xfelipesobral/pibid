@@ -1,11 +1,11 @@
 import React from 'react'
-import Routes from './routes'
+import Inicio from './pages/Inicio'
 
 import './css/principal.css'
 
 function App() {
 
-	return <Routes />	
+	return <Inicio />	
 }
 
 export default App

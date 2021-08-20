@@ -2,10 +2,19 @@
 import React, { useState } from "react"
 import Gallery from "react-photo-gallery"
 import Carousel, { Modal, ModalGateway } from "react-images"
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { Parallax, Pagination, Navigation } from "swiper/core"
 import Lottie from "react-lottie"
-import imagens from "./imagens"
 
-import background from "../../animations/48941-background-floting.json" // 46147-background2.json
+import "swiper/swiper.min.css"
+import "swiper/components/pagination/pagination.min.css"
+
+import galeria from "../../lib/galeria"
+import projetos from '../../lib/projetos'
+import Projeto from "../../components/projeto"
+import background from "../../animations/48941-background-floting.json"
+
+SwiperCore.use([Parallax, Pagination, Navigation])
 
 function Inicio() {
     const [currentImage, setCurrentImage] = useState(0)
@@ -26,11 +35,11 @@ function Inicio() {
             <ModalGateway>
                 {viewerIsOpen ? (
                     <Modal onClose={closeLightbox}>
-                        <Carousel currentIndex={currentImage} views={imagens.map(x => ({ "source": x.src, "caption": "pibd" }))} />
+                        <Carousel currentIndex={currentImage} views={galeria.map(x => ({ "source": x.src, "caption": "pibd" }))} />
                     </Modal>
                 ) : null}
             </ModalGateway>
-            
+
             <div id="cabecalho" >
                 <Lottie
                     options={{
@@ -60,12 +69,30 @@ function Inicio() {
             </div>
 
             <div id="sociais">
-                <h1 style={{ marginBottom: 30 }}>Redes sociais do projeto</h1>
+                <h1 style={{ marginBottom: 30 }}>Integrantes</h1>
                 <a href="mara.parisoto@ufpr.br" className="link">mara.parisoto@ufpr.br</a>
             </div>
 
+            <div id="projeto">
+                <h1>Projetos desenvolvidos</h1>
+                <div className="linha" />
+                <div id="lista">
+                    {
+                        projetos.map((projeto, i) => (
+                            <Projeto key={i} titulo={projeto.titulo} texto={projeto.descricao} imagem={projeto.imagem} />
+                        ))
+                    }
+                </div>
+            </div>
+
             <div id="galeria">
-                <Gallery photos={imagens} onClick={openLightbox} />
+                <h1>Galeria do projeto</h1>
+                <div className="linha" />
+                <Gallery photos={galeria} onClick={openLightbox} />
+            </div>
+
+            <div id="rodape">
+                <p><span style={{ fontWeight: "bold" }}>PIBID</span> - Universidade Federal do Paraná - Setor Palotina © 2021</p>
             </div>
         </div>
     )
