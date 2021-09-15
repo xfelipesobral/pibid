@@ -1,11 +1,11 @@
 import React from 'react'
-import Inicio from './pages/Inicio'
+import Rotas from '../src/routes'
 
 import './css/principal.css'
 
 function App() {
 
-	return <Inicio />	
+	return <Rotas />	
 }
 
 export default App

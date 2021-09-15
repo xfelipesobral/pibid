@@ -29,6 +29,70 @@ a:hover {
 }
 
 /*
+    @ Menu
+*/
+#menu {
+    display: flex;
+    padding: 10px 30px;
+    color: #fff;
+    background: #000;
+    align-items: center;
+}
+
+#menu #titulo {
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu #titulo a {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#menu #titulo .subtitulo {
+    font-weight: normal;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#menu #lista {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu #lista a {
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+#menu #lista .selecionado {
+    color: #F8427C;
+}
+
+#menu #lista a:hover {
+    color: #F8427C;
+}
+
+#menu .botao {
+    border: solid 1px #F8427C;
+    color: #F8427C;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#menu .botao:hover {
+    background: #F8427C;
+    color: #fff !important;
+    border: solid 1px #F8427C;
+    cursor: pointer;
+}
+
+/*
     @ Cabecalho
 */
 
@@ -39,18 +103,16 @@ a:hover {
     background-size: cover;
     height: 50vh;
     min-height: 150px;
-}
-
-#cabecalho .conteudo {
-    position: absolute;
-    z-index: 99;
-    width: 100%;
-    height: 50vh;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 150px;
+}
+
+#cabecalho #conteudo {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 #cabecalho img {
@@ -111,6 +173,7 @@ a:hover {
 */
 
 #galeria {
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -128,7 +191,7 @@ a:hover {
     padding: 50px 0;
 }
 
-#projeto h1 {
+#projeto h1, h3 {
     text-align: center;
 }
 
@@ -176,6 +239,6 @@ a:hover {
 #rodape {
     background-color: #000;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
